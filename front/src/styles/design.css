@@ -1,0 +1,285 @@
+::after, ::before, * {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    overflow: hidden;
+}
+
+.container, .body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.head {
+    width: 100%;
+    height: 7%;
+    background-color: rgba(45, 30, 255, 0.288);
+    box-shadow: 0 2px 2px rgb(150, 144, 144);
+}
+.head h2 {
+    font-size: 2vw;
+    font-weight: lighter;
+    color: black;
+    position: absolute;
+    top: 1%;
+    left: 43%;
+}
+
+/*** style of the forms ****/
+.form {
+    width: 34%;
+    height: 85%;
+    border-radius: 3px;
+    margin: 2% auto;
+    background-color: rgba(22, 5, 255, 0.144);
+    position: relative;
+}
+.form h2 {
+    font-size: 1.5vw;
+    font-weight: lighter;
+    background-color: rgba(22, 5, 255, 0.726);
+    color: white;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4%;
+}
+.form form {
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+.form:hover {
+    box-shadow: 0 0 20px rgb(90, 90, 90);
+}
+.form form div {
+    width: 100%;
+    height: 10.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.form form div:nth-child(7) {
+    height: 14%;
+    margin-bottom: 1.5%;
+}
+.form form span {
+    font-size: 12px;
+    position: absolute;
+    right: 12%;
+    top: -4%;
+    color: red;
+
+}
+.form form label {
+    font-size: 1.1vw;
+    position: absolute;
+    top: 40%;
+    left: 9%;
+    transition: 0.7s;
+    animation: opacity 5s;
+} 
+.form form textarea {
+    margin: 2% 0 0 0%;
+    padding-top: 5%;
+    width: 85%;
+    height: 100%;
+    border-radius: 3px;
+    resize: none;
+    animation: anim  ;
+}
+.form form input, .form form select {
+    width: 85%;
+    height: 58%;
+    border-radius: 3px;
+    border: 1px solid black;
+    margin-top: 3.5%;
+    text-indent: 2%;
+    background-color: white;
+    animation: anim  ;
+}
+.form form select {
+    width: 85.4%;
+    height: 60.5%;
+}
+
+.form form textarea:focus ~ label,
+.form form input:focus ~ label {
+    top: 1%;
+    z-index: 1;
+    padding: 0.2% 1% 0 1%;
+    color: white;
+    background-color: rgb(98, 87, 255);
+}
+.form form textarea:focus,
+.form form input:focus, 
+#msg:focus {
+    background-color: rgba ( 0, 0, 0, 0.5);
+}
+.form form textarea:focus ~ label {
+    top: -4%;
+    z-index: 1000;
+}
+.tops {
+    top: -5%;
+}
+
+@keyframes anim {
+    from {
+        transform: translateX( -40px ); 
+    }
+    to {
+        transform: translateX( 0px );
+    }
+}
+.form form div:nth-child(1) input {
+    animation-duration: 0.3s;
+}
+.form form div:nth-child(2) input {
+    animation-duration: 0.5s;
+}
+.form form div:nth-child(3) select {
+    animation-duration: 0.7s;
+}
+.form form div:nth-child(4) select {
+    animation-duration: 0.9s;
+}
+.form form div:nth-child(5) input {
+    animation-duration: 1.3s;
+}
+.form form div:nth-child(6) input {
+    animation-duration: 1.5s;
+}
+.form form textarea {
+    animation-duration: 1.7s;
+}
+.form form button {
+    width: 20%;
+    height: 7%;
+    margin: 2.5% 0 0 7%;
+    background-color: rgba(22, 5, 255, 0.822);
+    border: none;
+    border-radius: 3px;
+    color: white;
+    z-index: 2000;
+    animation: opacity 5s;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dongle {
+    0% {
+        transform: translate( -10px );
+    }
+    10% {
+        transform: translate( 10px );
+    }
+    20% {
+        transform: translate( -10px );
+    }
+    30% {
+        transform: translate( 10px );
+    }
+    40% {
+        transform: translate( -10px );
+    }
+    50% {
+        transform: translate( 10px );
+    }
+    60% {
+        transform: translate( -10px );
+    }
+    70% {
+        transform: translate( 10px );
+    }
+    80% {
+        transform: translate( -10px );
+    }
+    90% {
+        transform: translate( 10px );
+    }
+    100% {
+        transform: translate( 0px );
+    }
+}
+
+.bi-pencil-square,
+.bi-person-circle {
+    font-size: 2.2vw;
+    position: absolute;
+    right: 7%;
+    top: 0.7%;
+}
+.bi-person-circle {
+    right: 1%;
+    top: 1.2%;
+    display: flex;
+    align-items: center;
+    width: 8%;
+}
+.bi-x-circle-fill {
+    font-size: 2vw;
+}
+.bi-person-circle span {
+    font-size: 1vw;
+    margin-left: 3%;
+}
+.form #div-loader  {
+    width: 14%;
+    height: 8%;
+    position: absolute;
+    top: 90.5%;
+    right: 10%;
+}
+#div-loader span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 5%;
+    color: green;
+}
+#div-loader .span1 {
+    display: none;
+}
+#div-loader .span2 {
+    display: none;
+    color: red;
+}
+#div-loader span .bi-check2-circle {
+    font-size: 2vw;
+    margin-left: 5%;
+    color: green;
+}
+#div-loader span .bi-x-circle {
+    font-size: 2vw;
+    margin-left: 5%;
+    color: red;
+}
+.form #div-loader div {
+    width: 55%;
+    height: 80%;
+    border-radius: 50%;
+    border: 5px solid rgb(230, 230, 230);
+    border-top: 5px solid rgb(70, 57, 255);
+    border-bottom: 5px solid rgb(70, 57, 255);
+    animation: spin 1s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    from {
+        transform: rotate( 0deg );
+    }
+    to {
+        transform: rotate( 360deg );
+    }
+}
